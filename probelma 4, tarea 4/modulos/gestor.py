@@ -1,12 +1,13 @@
 from modulos.cliente import Cliente
 from modulos.servicios import Servicio
-# from modulos.reserva import Reserva
+from modulos.reserva import Reserva
 from modulos.logger import log
 from modulos.excepciones import (
     ErrorClienteInvalido, ErrorServicioNoDisponible,
     ErrorReservaInvalida, ErrorDuracionInvalida,
     ErrorParametroFaltante, ErrorOperacionNoPermitida, ErrorCalculoCosto
 )
+
 
 class GestorSistema:
     def __init__(self):
@@ -16,6 +17,7 @@ class GestorSistema:
         log.info('=' * 60)
         log.info('   SISTEMA SOFTWARE FJ - INICIADO')
         log.info('=' * 60)
+
     def registrar_cliente(self, nombre, email, telefono):
         try:
             if any(c.email == email.strip().lower() for c in self._clientes):
@@ -30,12 +32,17 @@ class GestorSistema:
         except Exception as ex:
             log.critical(f'ERROR INESPERADO registrando {nombre}: {ex}')
             return None
+
     def buscar_cliente(self, email):
         eb = email.strip().lower()
         for c in self._clientes:
-            if c.email == eb: return c
+            if c.email == eb:
+                return c
         return None
-    def listar_clientes(self): return list(self._clientes)
+
+    def listar_clientes(self):
+        return list(self._clientes)
+
     def agregar_servicio(self, servicio):
         try:
             if servicio is None:
@@ -48,12 +55,17 @@ class GestorSistema:
         except (ErrorParametroFaltante, ErrorServicioNoDisponible) as ex:
             log.error(f'AGREGAR SERVICIO FALLIDO | Error: {ex}')
             return False
+
     def buscar_servicio(self, nombre):
         nb = nombre.strip().lower()
         for s in self._servicios:
-            if s.nombre.lower() == nb: return s
+            if s.nombre.lower() == nb:
+                return s
         return None
-    def listar_servicios(self): return list(self._servicios)
+
+    def listar_servicios(self):
+        return list(self._servicios)
+
     def crear_reserva(self, email_cliente, nombre_servicio, duracion_horas, notas=''):
         try:
             cliente = self.buscar_cliente(email_cliente)
@@ -66,12 +78,15 @@ class GestorSistema:
             self._reservas.append(reserva)
             log.info(f'RESERVA CREADA | ID: {reserva.id} | Cliente: {cliente.nombre} | Servicio: {servicio.nombre}')
             return reserva
-        except (ErrorReservaInvalida, ErrorServicioNoDisponible, ErrorDuracionInvalida, ErrorParametroFaltante, ErrorOperacionNoPermitida) as ex:
+        except (ErrorReservaInvalida, ErrorServicioNoDisponible,
+                ErrorDuracionInvalida, ErrorParametroFaltante,
+                ErrorOperacionNoPermitida) as ex:
             log.error(f'CREAR RESERVA FALLIDA | Error: {ex}')
             return None
         except Exception as ex:
             log.critical(f'ERROR INESPERADO creando reserva: {ex}')
             return None
+
     def confirmar_reserva(self, reserva_id, aplicar_impuesto=True, descuento=0.0):
         try:
             reserva = next((r for r in self._reservas if r.id == reserva_id), None)
@@ -81,6 +96,7 @@ class GestorSistema:
         except (ErrorReservaInvalida, ErrorOperacionNoPermitida, ErrorCalculoCosto) as ex:
             log.error(f'CONFIRMAR [{reserva_id}] FALLIDA | Error: {ex}')
             return -1.0
+
     def cancelar_reserva(self, reserva_id, motivo='Cancelacion solicitada'):
         try:
             reserva = next((r for r in self._reservas if r.id == reserva_id), None)
@@ -91,6 +107,7 @@ class GestorSistema:
         except (ErrorReservaInvalida, ErrorOperacionNoPermitida) as ex:
             log.error(f'CANCELAR [{reserva_id}] FALLIDA | Error: {ex}')
             return False
+
     def completar_reserva(self, reserva_id):
         try:
             reserva = next((r for r in self._reservas if r.id == reserva_id), None)
@@ -101,6 +118,7 @@ class GestorSistema:
         except (ErrorReservaInvalida, ErrorOperacionNoPermitida) as ex:
             log.error(f'COMPLETAR [{reserva_id}] FALLIDA | Error: {ex}')
             return False
+
     def reporte_general(self):
         sep = '=' * 60
         print(f'\n{sep}')
@@ -113,6 +131,9 @@ class GestorSistema:
         for estado in ['pendiente', 'confirmada', 'cancelada', 'completada']:
             cantidad = sum(1 for r in self._reservas if r.estado == estado)
             print(f'    . {estado.capitalize():<13}: {cantidad}')
-        ingresos = sum(r.costo_final for r in self._reservas if r.estado in ('confirmada', 'completada'))
-        print(f'\n  Ingresos confirmados : \ COP')
+        ingresos = sum(
+            r.costo_final for r in self._reservas
+            if r.estado in ('confirmada', 'completada')
+        )
+        print(f'\n  Ingresos confirmados : ${ingresos:,.2f} COP')
         print(sep)

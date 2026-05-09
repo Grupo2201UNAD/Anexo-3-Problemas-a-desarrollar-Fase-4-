@@ -32,3 +32,80 @@
 2026-05-09 10:01:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
 2026-05-09 10:01:37 | ERROR    | CREAR RESERVA FALLIDA | Error: No se encontro cliente con email noexiste@correo.com.
 2026-05-09 10:01:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:00:37 | INFO     | ============================================================
+2026-05-09 15:00:37 | INFO     |    SISTEMA SOFTWARE FJ - INICIADO
+2026-05-09 15:00:37 | INFO     | ============================================================
+2026-05-09 15:00:37 | INFO     | SERVICIO AGREGADO | [SALA] Sala Conferencias A | Capacidad: 20 personas | Precio: \/h | Rango: 1h-12h | Disponible
+2026-05-09 15:00:37 | INFO     | SERVICIO AGREGADO | [EQUIPO] Laptop HP EliteBook (Laptop) | Precio: \/h | Rango: 1h-24h | Deposito: 20% | Disponible
+2026-05-09 15:00:37 | INFO     | SERVICIO AGREGADO | [ASESORIA] Asesoria Arquitectura Software | Area: Ingenieria de Software | Nivel: Senior (x1.5) | Precio: \/h | Cargo sesion: \ | Disponible
+2026-05-09 15:00:37 | INFO     | CLIENTE REGISTRADO | Cliente [1A4E3C9B] | Nombre: Ana Garcia Lopez | Email: ana.garcia@empresa.com | Tel: 3001234567 | Estado: Activo | Reservas: 0
+2026-05-09 15:00:37 | INFO     | CLIENTE REGISTRADO | Cliente [1A606C43] | Nombre: Carlos Mendoza Ruiz | Email: carlos.m@startup.co | Tel: +57 310 987 6543 | Estado: Activo | Reservas: 0
+2026-05-09 15:00:37 | ERROR    | REGISTRO FALLIDO | Pedro Sin Email | Error: El email 'no-es-email' no es válido. Use: usuario@dominio.com
+2026-05-09 15:00:37 | ERROR    | REGISTRO FALLIDO | Ana Copia | Error: Ya existe un cliente con el email ana.garcia@empresa.com.
+2026-05-09 15:00:37 | ERROR    | REGISTRO FALLIDO | AB | Error: El nombre debe tener al menos 3 caracteres.
+2026-05-09 15:00:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:00:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:00:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:00:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:00:37 | ERROR    | CREAR RESERVA FALLIDA | Error: No se encontro cliente con email noexiste@correo.com.
+2026-05-09 15:00:37 | CRITICAL | ERROR INESPERADO creando reserva: name 'Reserva' is not defined
+2026-05-09 15:13:23 | INFO     | ============================================================
+2026-05-09 15:13:23 | INFO     |    SISTEMA SOFTWARE FJ - INICIADO
+2026-05-09 15:13:23 | INFO     | ============================================================
+2026-05-09 15:13:24 | INFO     | SERVICIO AGREGADO | [SALA] Sala Conferencias A | Capacidad: 20 personas | Precio: \/h | Rango: 1h-12h | Disponible
+2026-05-09 15:13:24 | INFO     | SERVICIO AGREGADO | [EQUIPO] Laptop HP EliteBook (Laptop) | Precio: \/h | Rango: 1h-24h | Deposito: 20% | Disponible
+2026-05-09 15:13:24 | INFO     | SERVICIO AGREGADO | [ASESORIA] Asesoria Arquitectura Software | Area: Ingenieria de Software | Nivel: Senior (x1.5) | Precio: \/h | Cargo sesion: \ | Disponible
+2026-05-09 15:13:24 | INFO     | CLIENTE REGISTRADO | Cliente [E5911E57] | Nombre: Ana Garcia Lopez | Email: ana.garcia@empresa.com | Tel: 3001234567 | Estado: Activo | Reservas: 0
+2026-05-09 15:13:25 | INFO     | CLIENTE REGISTRADO | Cliente [059DF60D] | Nombre: Carlos Mendoza Ruiz | Email: carlos.m@startup.co | Tel: +57 310 987 6543 | Estado: Activo | Reservas: 0
+2026-05-09 15:13:25 | ERROR    | REGISTRO FALLIDO | Pedro Sin Email | Error: El email 'no-es-email' no es válido. Use: usuario@dominio.com
+2026-05-09 15:13:25 | ERROR    | REGISTRO FALLIDO | Ana Copia | Error: Ya existe un cliente con el email ana.garcia@empresa.com.
+2026-05-09 15:13:25 | ERROR    | REGISTRO FALLIDO | AB | Error: El nombre debe tener al menos 3 caracteres.
+2026-05-09 15:13:25 | INFO     | RESERVA CREADA | ID: 31C9F5DA | Cliente: Ana Garcia Lopez | Servicio: Sala Conferencias A
+2026-05-09 15:13:25 | INFO     | RESERVA CONFIRMADA | ID: 31C9F5DA | Cliente: Ana Garcia Lopez | Servicio: Sala Conferencias A | Duracion: 3h | Costo: $285,600.00
+2026-05-09 15:13:25 | DEBUG    | Intento confirmacion | Reserva: 31C9F5DA | Estado: confirmada
+2026-05-09 15:13:25 | INFO     | RESERVA CREADA | ID: FA58A466 | Cliente: Carlos Mendoza Ruiz | Servicio: Laptop HP EliteBook
+2026-05-09 15:13:25 | INFO     | RESERVA CONFIRMADA | ID: FA58A466 | Cliente: Carlos Mendoza Ruiz | Servicio: Laptop HP EliteBook | Duracion: 5h | Costo: $106,250.00
+2026-05-09 15:13:25 | DEBUG    | Intento confirmacion | Reserva: FA58A466 | Estado: confirmada
+2026-05-09 15:13:25 | INFO     | RESERVA CREADA | ID: BC976499 | Cliente: Ana Garcia Lopez | Servicio: Asesoria Arquitectura Software
+2026-05-09 15:13:25 | INFO     | RESERVA CONFIRMADA | ID: BC976499 | Cliente: Ana Garcia Lopez | Servicio: Asesoria Arquitectura Software | Duracion: 2h | Costo: $487,900.00
+2026-05-09 15:13:25 | DEBUG    | Intento confirmacion | Reserva: BC976499 | Estado: confirmada
+2026-05-09 15:13:25 | ERROR    | CONFIRMAR RESERVA FALLIDA | ID: 31C9F5DA | Error: Solo se confirman reservas pendientes. Estado: confirmada
+2026-05-09 15:13:25 | DEBUG    | Intento confirmacion | Reserva: 31C9F5DA | Estado: confirmada
+2026-05-09 15:13:25 | ERROR    | CONFIRMAR [31C9F5DA] FALLIDA | Error: Solo se confirman reservas pendientes. Estado: confirmada
+2026-05-09 15:13:26 | ERROR    | CREAR RESERVA FALLIDA | Error: Duracion 10h fuera del rango [1h-6h]
+2026-05-09 15:13:26 | WARNING  | RESERVA CANCELADA | ID: FA58A466 | Cliente: Carlos Mendoza Ruiz | Motivo: Cambio de planes
+2026-05-09 15:13:26 | ERROR    | CANCELACION FALLIDA | ID: FA58A466 | Error: No se puede cancelar una reserva en estado cancelada.
+2026-05-09 15:13:26 | ERROR    | CANCELAR [FA58A466] FALLIDA | Error: No se puede cancelar una reserva en estado cancelada.
+2026-05-09 15:13:26 | ERROR    | CREAR RESERVA FALLIDA | Error: No se encontro cliente con email noexiste@correo.com.
+2026-05-09 15:13:26 | ERROR    | CREAR RESERVA FALLIDA | Error: El servicio no esta disponible.
+2026-05-09 15:13:26 | INFO     | RESERVA COMPLETADA | ID: BC976499 | Cliente: Ana Garcia Lopez | Costo: $487,900.00
+2026-05-09 15:16:36 | INFO     | ============================================================
+2026-05-09 15:16:36 | INFO     |    SISTEMA SOFTWARE FJ - INICIADO
+2026-05-09 15:16:36 | INFO     | ============================================================
+2026-05-09 15:16:36 | INFO     | SERVICIO AGREGADO | [SALA] Sala Conferencias A | Capacidad: 20 personas | Precio: $80,000/h | Rango: 1h-12h | Disponible
+2026-05-09 15:16:36 | INFO     | SERVICIO AGREGADO | [EQUIPO] Laptop HP EliteBook (Laptop) | Precio: $25,000/h | Rango: 1h-24h | Deposito: 20% | Disponible
+2026-05-09 15:16:36 | INFO     | SERVICIO AGREGADO | [ASESORIA] Asesoria Arquitectura Software | Area: Ingenieria de Software | Nivel: Senior (x1.5) | Precio: $120,000/h | Cargo sesion: $50,000 | Disponible
+2026-05-09 15:16:36 | INFO     | CLIENTE REGISTRADO | Cliente [2E156390] | Nombre: Ana Garcia Lopez | Email: ana.garcia@empresa.com | Tel: 3001234567 | Estado: Activo | Reservas: 0
+2026-05-09 15:16:36 | INFO     | CLIENTE REGISTRADO | Cliente [4B638192] | Nombre: Carlos Mendoza Ruiz | Email: carlos.m@startup.co | Tel: +57 310 987 6543 | Estado: Activo | Reservas: 0
+2026-05-09 15:16:36 | ERROR    | REGISTRO FALLIDO | Pedro Sin Email | Error: El email 'no-es-email' no es válido. Use: usuario@dominio.com
+2026-05-09 15:16:36 | ERROR    | REGISTRO FALLIDO | Ana Copia | Error: Ya existe un cliente con el email ana.garcia@empresa.com.
+2026-05-09 15:16:36 | ERROR    | REGISTRO FALLIDO | AB | Error: El nombre debe tener al menos 3 caracteres.
+2026-05-09 15:16:36 | INFO     | RESERVA CREADA | ID: FC5A47AD | Cliente: Ana Garcia Lopez | Servicio: Sala Conferencias A
+2026-05-09 15:16:37 | INFO     | RESERVA CONFIRMADA | ID: FC5A47AD | Cliente: Ana Garcia Lopez | Servicio: Sala Conferencias A | Duracion: 3h | Costo: $285,600.00
+2026-05-09 15:16:37 | DEBUG    | Intento confirmacion | Reserva: FC5A47AD | Estado: confirmada
+2026-05-09 15:16:37 | INFO     | RESERVA CREADA | ID: B9F5DA39 | Cliente: Carlos Mendoza Ruiz | Servicio: Laptop HP EliteBook
+2026-05-09 15:16:37 | INFO     | RESERVA CONFIRMADA | ID: B9F5DA39 | Cliente: Carlos Mendoza Ruiz | Servicio: Laptop HP EliteBook | Duracion: 5h | Costo: $106,250.00
+2026-05-09 15:16:37 | DEBUG    | Intento confirmacion | Reserva: B9F5DA39 | Estado: confirmada
+2026-05-09 15:16:37 | INFO     | RESERVA CREADA | ID: A9167CD0 | Cliente: Ana Garcia Lopez | Servicio: Asesoria Arquitectura Software
+2026-05-09 15:16:37 | INFO     | RESERVA CONFIRMADA | ID: A9167CD0 | Cliente: Ana Garcia Lopez | Servicio: Asesoria Arquitectura Software | Duracion: 2h | Costo: $487,900.00
+2026-05-09 15:16:37 | DEBUG    | Intento confirmacion | Reserva: A9167CD0 | Estado: confirmada
+2026-05-09 15:16:38 | ERROR    | CONFIRMAR RESERVA FALLIDA | ID: FC5A47AD | Error: Solo se confirman reservas pendientes. Estado: confirmada
+2026-05-09 15:16:38 | DEBUG    | Intento confirmacion | Reserva: FC5A47AD | Estado: confirmada
+2026-05-09 15:16:38 | ERROR    | CONFIRMAR [FC5A47AD] FALLIDA | Error: Solo se confirman reservas pendientes. Estado: confirmada
+2026-05-09 15:16:38 | ERROR    | CREAR RESERVA FALLIDA | Error: Duracion 10h fuera del rango [1h-6h]
+2026-05-09 15:16:38 | WARNING  | RESERVA CANCELADA | ID: B9F5DA39 | Cliente: Carlos Mendoza Ruiz | Motivo: Cambio de planes
+2026-05-09 15:16:39 | ERROR    | CANCELACION FALLIDA | ID: B9F5DA39 | Error: No se puede cancelar una reserva en estado cancelada.
+2026-05-09 15:16:39 | ERROR    | CANCELAR [B9F5DA39] FALLIDA | Error: No se puede cancelar una reserva en estado cancelada.
+2026-05-09 15:16:39 | ERROR    | CREAR RESERVA FALLIDA | Error: No se encontro cliente con email noexiste@correo.com.
+2026-05-09 15:16:39 | ERROR    | CREAR RESERVA FALLIDA | Error: El servicio no esta disponible.
+2026-05-09 15:16:40 | INFO     | RESERVA COMPLETADA | ID: A9167CD0 | Cliente: Ana Garcia Lopez | Costo: $487,900.00
